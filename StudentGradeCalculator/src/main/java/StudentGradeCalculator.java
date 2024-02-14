@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class StudentGradeCalculator {
 
     public static float averagePercentage(int totalMarks , int numberOfSubjects) {
-        float averagePercentage = 0f;
+        float averagePercentage;
         averagePercentage = Math.round(totalMarks / numberOfSubjects);
         return averagePercentage;
     }

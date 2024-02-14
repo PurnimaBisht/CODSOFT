@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class StudentGradeCalculator {
 
     public static double averagePercentage(double totalMarks , int numberOfSubjects) {
-        double averagePercentage = totalMarks / numberOfSubjects ;
-        return averagePercentage;
+        return totalMarks / numberOfSubjects;
     }
 
     public static char grade(double averagePercentage) {

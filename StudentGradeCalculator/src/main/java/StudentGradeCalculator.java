@@ -18,10 +18,10 @@ public class StudentGradeCalculator {
             grade = 'C';
         }
         else if (averagePercentage <= 55 && averagePercentage > 40) {
-            grade = 'E';
+            grade = 'D';
         }
         else {
-            grade = 'F';
+            grade = 'E';
         }
         return grade;
     }

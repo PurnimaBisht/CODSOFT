@@ -2,13 +2,11 @@ import java.util.Scanner;
 
 public class StudentGradeCalculator {
 
-    public static float averagePercentage(int totalMarks , int numberOfSubjects) {
-        float averagePercentage = 0f;
-        averagePercentage = Math.round(totalMarks / numberOfSubjects);
-        return averagePercentage;
+    public static double averagePercentage(double totalMarks , int numberOfSubjects) {
+        return totalMarks / numberOfSubjects;
     }
 
-    public static char grade(float averagePercentage) {
+    public static char grade(double averagePercentage) {
         char grade;
         if (averagePercentage <= 100 && averagePercentage > 85) {
             grade = 'A';
@@ -28,7 +26,7 @@ public class StudentGradeCalculator {
         return grade;
     }
 
-    public static void displayResult(int totalMarks, float averagePercentage, char grade) {
+    public static void displayResult(double totalMarks, double averagePercentage, char grade) {
         System.out.println("Total marks obtained by the student out of 500 is : " + totalMarks);
         System.out.println("Average Percentage obtained by the student is : " + averagePercentage);
         System.out.println("Grade obtained by the student is : " + grade);
@@ -37,11 +35,11 @@ public class StudentGradeCalculator {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         final int numberOfSubjects = 5;  // mathematics, english, computer science, physics, chemistry respectively
-        int totalMarks = 0 ;
-        int i = 1 ;
+        double totalMarks = 0;
+        int i = 1;
         while (i <= numberOfSubjects) {
             System.out.print("Enter marks of subject " + i + " : " );
-            int marks = scn.nextInt();
+            double marks = scn.nextInt();
             if (marks < 0 || marks > 100) {
                 System.out.println("Marks should be between 0 and 100");
             }
@@ -50,7 +48,7 @@ public class StudentGradeCalculator {
                 i++;
             }
         }
-        float averagePercentage = averagePercentage(totalMarks, numberOfSubjects);
+        double averagePercentage = averagePercentage(totalMarks, numberOfSubjects);
         char grade = grade(averagePercentage);
         displayResult(totalMarks, averagePercentage, grade);
     }

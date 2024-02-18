@@ -19,7 +19,7 @@ public class NumberGame {
         while( attempts > 0 ) {
             System.out.print("Enter your guess : ");
             int guess = scn.nextInt();
-            if (guess < 1) {
+            if (guess < 1 || guess > 100) {
                 System.out.println("The chosen number is not between 1 to 100. Please choose a number between 1 to 100");
                 attempts-- ;
             }
